@@ -63,7 +63,7 @@ export default function() {
       running: false,
 
       movedRate: 0,
-      boundRate: 0.15
+      boundRate: 0.1
     },
 
     /**

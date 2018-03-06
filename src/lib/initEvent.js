@@ -4,7 +4,7 @@ export default function() {
   }
 
   if (this.initIndex !== this.slide.index) {
-    this.slideTo(this.initIndex, 0.1);
+    this.slideTo(this.initIndex, 0.01);
   }
 
   if (this.slide.auto) {

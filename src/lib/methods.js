@@ -156,7 +156,7 @@ export default {
     this.endTranslateX = this.getEndTranslateX();
     this.elems.content.style[cssTransitionDuration] = `${duration}s`;
     utils.setTranslateX(this.elems.content, this.endTranslateX);
-    console.log(this.endTranslateX)
+    // console.log(this.endTranslateX)
 
     setTimeout(() => {
       this.slided();
@@ -165,15 +165,16 @@ export default {
   },
 
   transitionEndHandle() {
-    // this.elems.content.addEventListener('transitionend', () => {
-    //     console.log('transitionend')
-    //     this.slided();
-    //     this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
-    // }, false);
     // this.elems.content.addEventListener('webkitTransitionEnd', () => {
-    //     console.log('webkitTransitionEnd')
-    //     this.slided();
-    //     this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
+    //   alert('webkitTransitionEnd')
+    //   this.slided();
+    //   this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
+    // }, false);
+
+    // this.elems.content.addEventListener('transitionend', () => {
+    //   alert('transitionend')
+    //   this.slided();
+    //   this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
     // }, false);
   },
 

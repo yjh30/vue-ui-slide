@@ -2,6 +2,7 @@
   "name": "vue-ui-slide",
   "version": "1.0.0",
   "description": "轮播组件：支持循环，自动轮播，touch触屏，click单机轮播，显示分页，可以通过配置props，自定义组件轮播效果",
+  "main": "src/lib/index.vue",
   "author": "1025357509@qq.com",
   "private": true,
   "scripts": {

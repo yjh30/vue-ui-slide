@@ -1,5 +1,6 @@
 import utils from './utils/index';
 
+const cssTransitionProperty = utils.getCssProperty('transition-property');
 const cssTransitionDuration = utils.getCssProperty('transition-duration');
 const cssTransitionTimingFunction = utils.getCssProperty('transition-timing-function');
 const cssBackfaceVisibility = utils.getCssProperty('backface-visibility');
@@ -16,8 +17,12 @@ export default function() {
   this.$el.style.overflow = 'hidden';
 
   content.style.width = this.slide.contentWidth + 'px';
-  content.classList.add('vue-ui-slide-flex');
-  content.style[cssTransitionTimingFunction] = this.slide.effect;
+
+  content.style[cssTransitionProperty] = 'transform';
   content.style[cssTransitionDuration] = '';
+  content.style[cssTransitionTimingFunction] = this.slide.effect;
   content.style[cssBackfaceVisibility] = 'hidden';
+
+  // fix 首次触屏滑动闪动 bug
+  utils.setTranslateX(content, 0);
 }

@@ -1,14 +1,16 @@
 <template>
-  <div>
+  <div class="example">
     <slide 
       v-if="pics.length > 0" 
+      :duration="300" 
+      effect="ease" 
       :init-index="1" 
       :loop="true" 
       :auto="false" 
       :show-page-index="false" 
       :is-fullscreen="isFullscreen">
 
-      <div v-for="item in pics">
+      <div class="slide-item" v-for="item in pics">
         <!-- <img :src="item" @click="toggleFullscreen"> -->
         <img :src="item">
       </div>
@@ -44,5 +46,10 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .example {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
 </style>

@@ -21,6 +21,19 @@
       }
     }
   }
+  .slide-content {
+    &:after {
+      content: ' ';
+      display: block;
+      font-size: 0;
+      height: 0;
+      overflow: hidden;
+      clear: both;
+    }
+    &>* {
+      float: left;
+    }
+  }
   .slide-btn {
     position: absolute;
     top: 50%;
@@ -51,15 +64,4 @@
       }
     }
   }
-}
-
-.vue-ui-slide-flex {
-  display: flex;
-  &>* {
-    flex: 1;
-  }
-}
-
-.vue-ui-slide-panel-flex {
-  flex: 1;
 }

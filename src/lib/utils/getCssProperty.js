@@ -1,18 +1,40 @@
 const vendors = ['webkit', 'moz', 'ms', 'o'];
 
-export default function(property) {
+function getJsProperty(cssProperty) {
+  cssProperty = cssProperty.replace(/^-/, '');
+  const arr = cssProperty.split('-');
+
+  if (arr.length > 1) {
+    return arr.map((word, i) => {
+      if (i > 0) {
+        return word.replace(/^\w/, word.charAt(0).toUpperCase());
+      }
+      return word;
+    }).join('');
+  }
+  return cssProperty;
+}
+
+export default function(cssProperty) {
   const el = document.createElement('div');
-  if (property in el.style) return property;
+  let vendorCssProperty, i = 0;
+  let jsProperty = getJsProperty(cssProperty);
 
-  for (let i = 0, len = vendors.length; i < len; i++) {
-    var p = vendors[i] + property[0].toUpperCase() + property.substring(1);
-    if (p in el.style) break;
+  if (jsProperty in el.style) {
+    return cssProperty;
   }
 
-  if (!p) {
-    throw new Error(`your browser not support the css property: ${property}`);
-    return;
+  const len = vendors.length;
+
+  for (; i < len; i++) {
+    vendorCssProperty = `-${vendors[i]}-${cssProperty}`;
+    jsProperty = getJsProperty(vendorCssProperty);
+    if (jsProperty in el.style) {
+      return vendorCssProperty;
+    }
   }
 
-  return p;
+  if (!vendorCssProperty) {
+    throw new Error(`your browser not support the css property: ${cssProperty}`);
+  }
 }
