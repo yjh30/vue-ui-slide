@@ -1,6 +1,7 @@
 <template>
   <div>
-    <slide v-if="pics.length > 0" 
+    <slide 
+      v-if="pics.length > 0" 
       :init-index="1" 
       :loop="true" 
       :auto="false" 

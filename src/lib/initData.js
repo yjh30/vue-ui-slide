@@ -3,6 +3,6 @@ import initStatus from './initStatus';
 import initElemsStyle from './initElemsStyle';
 
 export default function() {
-    initStatus.call(this);
-    initElemsStyle.call(this);
+  initStatus.call(this);
+  initElemsStyle.call(this);
 }

@@ -5,9 +5,9 @@ import getCssProperty from './getCssProperty';
 import setTranslateX from './setTranslateX';
 
 export default {
-    getPropertySize,
-    outerWidth,
-    outerHeight,
-    getCssProperty,
-    setTranslateX
+  getPropertySize,
+  outerWidth,
+  outerHeight,
+  getCssProperty,
+  setTranslateX
 }
