@@ -56,6 +56,7 @@ npm i vue-ui-slide --save
 ```
 
 ```javascript
+<script>
   import slide from '../lib/index'
 
   export default {
@@ -70,6 +71,7 @@ npm i vue-ui-slide --save
       slide
     }
   }
+</script>
 ```
 ### 组件props配置
   - **auto** 自动轮播，默认false

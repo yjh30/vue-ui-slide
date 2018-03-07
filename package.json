@@ -1,16 +1,24 @@
 {
   "name": "vue-ui-slide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "轮播图，可自定义是否循环轮播，轮播时长等。",
   "main": "src/lib/index.vue",
   "jsnext:main": "src/lib/index.vue",
-  "author": "1025357509@qq.com",
   "publish": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "build": "node build/build.js"
+    "start": "npm run dev"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yjh30/vue-ui-slide"
+  },
+  "author": "杨君华",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yjh30/vue-ui-slide/issues"
+  },
+  "homepage": "https://github.com/yjh30/vue-ui-slide#readme",
   "dependencies": {
     "vue": "^2.5.2"
   },
