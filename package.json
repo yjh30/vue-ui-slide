@@ -5,7 +5,7 @@
   "main": "src/lib/index.vue",
   "jsnext:main": "src/lib/index.vue",
   "author": "1025357509@qq.com",
-  "private": true,
+  "publish": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
