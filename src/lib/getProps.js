@@ -58,6 +58,11 @@ export default function() {
     initIndex: {
       type: Number,
       default: 1
+    },
+
+    boundRate: {
+      type: Number,
+      default: 0.1
     }
   }
 }

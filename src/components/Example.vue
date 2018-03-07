@@ -8,6 +8,7 @@
       :loop="false" 
       :auto="false" 
       :show-page-index="false" 
+      :bound-rate="0.1" 
       :is-fullscreen="isFullscreen">
 
       <div class="slide-item" v-for="item in pics">

@@ -156,11 +156,6 @@ export default {
     this.endTranslateX = this.getEndTranslateX();
     this.elems.content.style[cssTransitionDuration] = `${duration}s`;
     utils.setTranslateX(this.elems.content, this.endTranslateX);
-
-    // setTimeout(() => {
-    //   this.slided();
-    //   this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
-    // }, this.slide.duration);
   },
 
   transitionEndHandle() {

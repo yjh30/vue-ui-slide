@@ -31,6 +31,7 @@ export default function() {
   s.effect = this.effect || s.effect;
   s.delay = this.delay || s.delay;
   s.interval = this.interval || s.interval;
+  s.boundRate = this.boundRate || s.boundRate;
   s.loop = initVal(this.loop, s.loop);
 
   s.showPage = initVal(this.showPage, s.showPage);
