@@ -38,6 +38,11 @@ export default function() {
      *  @property delay 开始轮播延迟时间，默认4000ms
      *  @property interval 动画间隔时间，默认4000ms
      *  @property loop 支持循环滑动，默认true
+
+
+     *  @property showPage 显示页码指示器，默认true
+     *  @property showPageIndex 显示页码数字，默认true
+     *  @property showBtn 显示上一页下一页按钮，默认true
      *  @property running 滑屏进行中(动画正在执行)
 
      *  @property movedRate 滑动比率，即：this.move.distanceX / this.slide.width
@@ -60,6 +65,9 @@ export default function() {
       interval: 4000,
       loop: true,
 
+      showPage: true,
+      showPageIndex: true,
+      showBtn: true,
       running: false,
 
       movedRate: 0,

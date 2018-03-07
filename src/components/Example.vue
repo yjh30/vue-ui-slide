@@ -5,7 +5,7 @@
       :duration="300" 
       effect="ease" 
       :init-index="1" 
-      :loop="true" 
+      :loop="false" 
       :auto="false" 
       :show-page-index="false" 
       :is-fullscreen="isFullscreen">
