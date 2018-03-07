@@ -156,26 +156,23 @@ export default {
     this.endTranslateX = this.getEndTranslateX();
     this.elems.content.style[cssTransitionDuration] = `${duration}s`;
     utils.setTranslateX(this.elems.content, this.endTranslateX);
-    // console.log(this.endTranslateX)
 
-    setTimeout(() => {
-      this.slided();
-      this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
-    }, this.slide.duration);
+    // setTimeout(() => {
+    //   this.slided();
+    //   this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
+    // }, this.slide.duration);
   },
 
   transitionEndHandle() {
-    // this.elems.content.addEventListener('webkitTransitionEnd', () => {
-    //   alert('webkitTransitionEnd')
-    //   this.slided();
-    //   this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
-    // }, false);
+    this.elems.content.addEventListener('webkitTransitionEnd', () => {
+      this.slided();
+      this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
+    }, false);
 
-    // this.elems.content.addEventListener('transitionend', () => {
-    //   alert('transitionend')
-    //   this.slided();
-    //   this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
-    // }, false);
+    this.elems.content.addEventListener('transitionend', () => {
+      this.slided();
+      this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
+    }, false);
   },
 
   doTouchStart,

@@ -73,7 +73,7 @@ export function doTouchMove(e) {
 
   if (!this.slide.loop) {
     if (prevSlideBoundary || nextSlideBoundary) {
-      const denominator = Math.abs(this.move.distanceX) / this.client.width + 1;
+      const denominator = Math.abs(this.move.distanceX) / this.client.width + 2;
       this.move.distanceX = this.move.distanceX / denominator;
     }
   } else if (nextSlideBoundary) {
