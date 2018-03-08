@@ -4,6 +4,7 @@ npm i vue-ui-slide --save
 ```
 
 ### 使用前须知
+#### 1.0.0以上，1.1.0以下版本 导出的是.vue文件，使用及配置如下：
 使用npm安装以后，安装包目录中package.json有两个出口，jsnext:main，main，出口文件为.vue组件文件
 
   - 如果你的webpack配置包含如下配置，则可以正常引用
@@ -32,6 +33,11 @@ npm i vue-ui-slide --save
       }
   }
   ```
+#### 1.1.0及以上版本支持vue ssr，无需配置，直接使用，如下：
+```javascript
+  import 'vue-ui-slide/dist/component.css';
+  import Slide from 'vue-ui-slide';
+```
 
 ### Usage
 ```html

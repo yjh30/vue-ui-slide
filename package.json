@@ -1,13 +1,13 @@
 {
   "name": "vue-ui-slide",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "轮播图，可自定义是否循环轮播，轮播时长等。",
-  "main": "src/lib/index.vue",
-  "jsnext:main": "src/lib/index.vue",
+  "main": "dist/component.js",
   "publish": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "build": "node build/build.js"
   },
   "repository": {
     "type": "git",

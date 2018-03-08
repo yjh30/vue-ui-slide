@@ -20,6 +20,7 @@
 
 <script>
   import './index.scss';
+
   import getData from './getData';
   import getProps from './getProps';
   import methods from './methods';
@@ -32,8 +33,10 @@
     props: getProps(),
     methods: methods,
     mounted() {
-      initData.call(this);
-      initEvent.call(this);
+      if (typeof window !== 'undefined') {
+        initData.call(this);
+        initEvent.call(this);
+      }
     },
     watch: {
       isFullscreen(value) {
@@ -46,3 +49,74 @@
     }
   }
 </script>
+<!-- 
+<style lang="scss" scoped>
+  .vue-ui-slide {
+    position: relative;
+    &.fullscreen {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #000;
+      .slide-content {
+        height: 100%;
+        &>* {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+    .slide-content {
+      &:after {
+        content: ' ';
+        display: block;
+        font-size: 0;
+        height: 0;
+        overflow: hidden;
+        clear: both;
+      }
+      &>* {
+        float: left;
+      }
+    }
+    .slide-btn {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #FFF;
+      padding: 10px;
+    }
+    .prev-btn {
+      left: 0;
+    }
+    .next-btn {
+      right: 0;
+    }
+    .slide-btn.disabled {
+      background-color: #CCC;
+    }
+
+    .pages {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      &>span {
+        padding: 5px;
+        &.active {
+          color: red;
+        }
+      }
+    }
+  }
+</style>
+ -->

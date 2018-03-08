@@ -16,6 +16,9 @@ function getJsProperty(cssProperty) {
 }
 
 export default function(cssProperty) {
+  if (typeof window === 'undefined') {
+    return;
+  }
   const el = document.createElement('div');
   let vendorCssProperty, i = 0;
   let jsProperty = getJsProperty(cssProperty);
