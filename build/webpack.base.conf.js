@@ -8,13 +8,8 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-
-
-module.exports = {
+const webpackConfig = {
   context: path.resolve(__dirname, '../'),
-  entry: {
-    component: './src/lib/index.vue'
-  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -80,3 +75,11 @@ module.exports = {
     child_process: 'empty'
   }
 }
+
+if (process.env.NODE_ENV !== 'production') {
+  webpackConfig.entry = {
+    main: './src/main.js'
+  }
+}
+
+module.exports = webpackConfig

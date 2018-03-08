@@ -63,7 +63,7 @@ npm i vue-ui-slide --save
 
 ```javascript
 <script>
-  import slide from '../lib/index'
+  import slide from 'vue-ui-slide'
 
   export default {
     data() {
