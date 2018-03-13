@@ -1,6 +1,6 @@
 {
   "name": "vue-ui-slide",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "轮播图，可自定义是否循环轮播，轮播时长等。",
   "main": "dist/component.js",
   "publish": true,

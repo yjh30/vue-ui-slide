@@ -9,6 +9,7 @@
       :auto="false" 
       :show-page-index="false" 
       :bound-rate="0.1" 
+      :slide-change="slideChange" 
       :is-fullscreen="isFullscreen">
 
       <div class="slide-item" v-for="item in pics">
@@ -38,6 +39,9 @@
     methods: {
       toggleFullscreen() {
         this.isFullscreen = !this.isFullscreen;
+      },
+      slideChange(index, prevIndex) {
+        console.log(index);
       }
     },
     components: {
