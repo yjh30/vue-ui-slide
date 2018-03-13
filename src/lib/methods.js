@@ -161,12 +161,12 @@ export default {
   transitionEndHandle() {
     this.elems.content.addEventListener('webkitTransitionEnd', () => {
       this.slided();
-      this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
+      this.slideChange(this.slide.nextIndex - 1, this.slide.prevIndex - 1);
     }, false);
 
     this.elems.content.addEventListener('transitionend', () => {
       this.slided();
-      this.slideChange(this.slide.nextIndex, this.slide.prevIndex);
+      this.slideChange(this.slide.nextIndex - 1, this.slide.prevIndex - 1);
     }, false);
   },
 
