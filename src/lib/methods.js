@@ -156,6 +156,13 @@ export default {
     this.endTranslateX = this.getEndTranslateX();
     this.elems.content.style[cssTransitionDuration] = `${duration}s`;
     utils.setTranslateX(this.elems.content, this.endTranslateX);
+
+    // 当且只有一个面板时，transitionend事件将不会触发
+    if (this.slide.length === 1) {
+      setTimeout(() => {
+        this.slided()
+      }, this.slide.duration)
+    }
   },
 
   transitionEndHandle() {
